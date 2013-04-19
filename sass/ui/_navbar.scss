@@ -94,7 +94,7 @@
   		background: darken($navbar-color, 5%);
   		&.active {
   			height: auto;
-  			max-height: 600px;
+  			max-height: 800px;
   			z-index: 999999;
   			@include transition-duration(.5s);
   			@include box-shadow(0 2px 2px darken($navbar-color, 15%));
