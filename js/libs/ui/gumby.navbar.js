@@ -41,12 +41,23 @@
 		}
 
 		// override with childlinks
+<<<<<<< HEAD
 		this.$dropDowns.find('.dropdown li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
+=======
+		this.$el.find('li:not(:has(.dropdown)) a[href]').on(Gumby.click, this.openLink);
+>>>>>>> dff1c89e8d8151bfe779b30705f9ea75a6554e6c
 	}
 
 	Navbar.prototype.toggleDropdown = function(e) {
 		e.preventDefault();
 
+<<<<<<< HEAD
+=======
+		if($(this).parents('.dropdown')) {
+			e.stopImmediatePropagation();
+		}
+
+>>>>>>> dff1c89e8d8151bfe779b30705f9ea75a6554e6c
 		if($(e.target).is('i')) {
 			return;
 		}

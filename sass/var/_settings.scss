@@ -163,6 +163,28 @@ $tt-position: top;					// position: top / bottom / left / right
 $tt-align: left;					// text and caret alignment: left / right
 $tt-pretty: yes;					// yes = pretty / no = flat
 
+// Tables
+$table-bgcolor: #fff;
+$table-thead-bgcolor: $primary-color;
+$table-row-first-cell-font-weight: bold;
+$table-border-size: 1px;
+$table-border-style: solid;
+$table-border-color: #e5e5e5;
+$table-cell-border-size: 1px;
+$table-cell-border-color: #e5e5e5;
+$table-cell-border-style: solid;
+// .rounded
+$table-border-radius: 4px;
+// .striped
+$table-stripe-bgcolor: #e5e5e5;
+
+// Tooltips
+$tt-min-width: 130px;
+$tt-bgcolor: $primary-color;
+$tt-position: top;					// position: top / bottom / left / right
+$tt-align: left;					// text and caret alignment: left / right
+$tt-pretty: yes;					// yes = pretty / no = flat
+
 // Floats
 $default-float: left;
 $switch-float: right;
