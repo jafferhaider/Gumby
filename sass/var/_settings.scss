@@ -78,6 +78,8 @@ $body-link-hover-color: #2a6b7b !default;
 $global-bg-color: #fff;
 $navbar-color: #1a4556;
 $navbar-link-color: #fff;
+$navbar-hover-color: #338397;
+$navbar-dropdown-hover-color: #2A6E7D;
 
 $primary-color: #3185A2;
 $secondary-color: #42a35a;
@@ -142,14 +144,14 @@ $drawer-inner-shadow-blur: 0;
 $drawer-inner-shadow-color: none;
 
 // Tables
-$table-bgcolor: #fff;
-$table-thead-bgcolor: $primary-color;
+$table-bgcolor: none;
+$table-thead-bgcolor: none;
 $table-row-first-cell-font-weight: bold;
-$table-border-size: 1px;
+$table-border-size: 0px;
 $table-border-style: solid;
 $table-border-color: #e5e5e5;
-$table-cell-border-size: 1px;
-$table-cell-border-color: #e5e5e5;
+$table-cell-border-size: 0px;
+$table-cell-border-color: #c5d2d7;
 $table-cell-border-style: solid;
 // .rounded
 $table-border-radius: 4px;
@@ -164,14 +166,15 @@ $tt-align: left;					// text and caret alignment: left / right
 $tt-pretty: yes;					// yes = pretty / no = flat
 
 // Tables
-$table-bgcolor: #fff;
-$table-thead-bgcolor: $primary-color;
+$table-bgcolor: none;
+$table-thead-bgcolor: none;
+$table-thead-color: inherit;
 $table-row-first-cell-font-weight: bold;
-$table-border-size: 1px;
+$table-border-size: 0px;
 $table-border-style: solid;
 $table-border-color: #e5e5e5;
-$table-cell-border-size: 1px;
-$table-cell-border-color: #e5e5e5;
+$table-cell-border-size: 0px;
+$table-cell-border-color: #c5d2d7;
 $table-cell-border-style: solid;
 // .rounded
 $table-border-radius: 4px;
