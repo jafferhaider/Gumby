@@ -20,7 +20,7 @@ $nav-distance: 0; 							// Navigation distance from the top of the viewport
 // Typography
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-style-italic: italic;
-$icons: entypo;
+$icons: postermywall;
 $font-smoothing: antialiased;
 
 // Font Weights
@@ -163,7 +163,7 @@ $tt-min-width: 130px;
 $tt-bgcolor: $primary-color;
 $tt-position: top;					// position: top / bottom / left / right
 $tt-align: left;					// text and caret alignment: left / right
-$tt-pretty: yes;					// yes = pretty / no = flat
+$tt-pretty: no;					// yes = pretty / no = flat
 
 // Tables
 $table-bgcolor: none;

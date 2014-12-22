@@ -215,13 +215,13 @@ label + {
         @if($icons != ""){
           font-family: "#{$icons}";
           @if nth($error, 1) == danger {
-            content: "#{$entypo-icon-cancel-circled}";
+            content: "\f00d";
           }
           @if nth($error, 1) == warning {
-            content: "#{$entypo-icon-attention}";
+            content: "\f071";
           }
           @if nth($error, 1) == success {
-            content: "#{$entypo-icon-check}";
+            content: "\f00c";
           }
         font-size: $norm;
         position: absolute;

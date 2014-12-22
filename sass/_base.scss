@@ -34,7 +34,10 @@ html, body {
 }
 
 // include all entypo icon classes
+/*
+We're using FontAwesome instead, added a separate CSS file in the project.
 @include icon(all);
+*/
 
 // .fixed elements will be static at supplied breakpoint
 // set arg to false for permanent .fixed elements

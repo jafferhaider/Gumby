@@ -21,3 +21,16 @@ i[class*=" icon-"] {
   text-align: center;
 }
 
+i[class^="icon-"].left,
+i[class*=" icon-"].left {
+    margin-left: -3px;
+    position: relative;
+    top: 0.05rem;
+}
+
+i[class^="icon-"].right,
+i[class*=" icon-"].right {
+    margin-right: -3px;
+    position: relative;
+    top: 0.05rem;
+}

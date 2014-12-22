@@ -215,51 +215,6 @@
   }
 }
 
-// Pretty Navigation Styles
-
-.pretty.navbar {
-  @include background-image(linear-gradient(lighten($navbar-color, 20%),darken($navbar-color, 10%)));
-  @include box-shadow(inset 0 1px 1px lighten($navbar-color, 20%),
-          0 1px 2px rgba(0,0,0,0.80) !important); /* Remove this line if you dont want a dropshadow on your navigation*/
-
-  // Pretty Nav Toggle Styles
-  @include respond(all-phones) {
-    a.toggle {
-      border: 1px solid darken($navbar-color, 5%);
-      @include background-image(linear-gradient(lighten($navbar-color, 20%), $navbar-color));
-      @include box-shadow(inset 0 1px 2px lighten($navbar-color, 25%),
-        inset 0 -1px 1px lighten($navbar-color, 5%),
-        inset 1px 0 1px lighten($navbar-color, 5%),
-        inset -1px 0 1px lighten($navbar-color, 5%),
-        0 1px 1px lighten($navbar-color, 10%));
-      i {
-        @include text-shadow(0 1px 1px darken($navbar-color, 20%));
-      }
-      &:hover {
-        @include background-image(linear-gradient(lighten($navbar-color, 25%), lighten($navbar-color, 5%)));
-      }
-      &:active, &.active {
-        @include background-image(linear-gradient(darken($navbar-color, 5%), $navbar-color));
-        @include box-shadow(0 1px 1px lighten($navbar-color, 10%));
-      }
-    }
-  }
-  &.row {
-    @include border-radius($button-radius);
-    @include respond(all-phones) {
-      @include border-radius(0);
-    }
-  }
-  ul li.field input.search {
-    @include background-image(linear-gradient(darken($navbar-color, 20%), lighten($navbar-color, 2%)));
-    border: none;
-    @include box-shadow(0 1px 2px lighten($navbar-color, 25%) !important); /* Remove this line if you dont want a dropshadow on your navigation*/
-  }
-  > ul > li:first-child, .pretty.navbar > ul > li:first-child a:hover {
-    @include box-shadow(none);
-  }
-}
-
 // Dropdown menu styles
 
 .navbar li .dropdown {
