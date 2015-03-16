@@ -122,40 +122,23 @@
 
 		Gumby.debug('Triggering Toggle', this.$el);
 
-		var $target;
-
 		// no targets just toggle active class on toggle
 		if(!this.targets) {
-			this.$el.toggleClass(this.className);
+                        Gumby.toggle(this.$el);
 
 		// combine single target with toggle and toggle active class
 		} else if(this.targets.length == 1) {
-			this.$el.add(this.targets[0]).toggleClass(this.className);
+                        Gumby.toggle(this.targets[0]);
 
 		// if two targets check active state of first
 		// always combine toggle and first target
 		} else if(this.targets.length > 1) {
-			if(this.targets[0].hasClass(this.className)) {
-				$target = this.targets[0];
-				
-				// add this element to it unless gumby-self set
-				if(!this.self) {
-					$target = $target.add(this.$el);
-				}
-
-				$target.removeClass(this.className);
-				this.targets[1].addClass(this.className);
-			} else {
-				$target = this.targets[0];
-				
-				// add this element to it unless gumby-self set
-				if(!this.self) {
-					$target = $target.add(this.$el);
-				}
-
-				$target.addClass(this.className);
-				this.targets[1].removeClass(this.className);
-			}
+                        if(this.targets[0].height() > 0 || this.targets[1].height() > 0) {
+                            Gumby.toggle(this.targets[0]);
+                            Gumby.toggle(this.targets[1]);
+                        } else {
+                            Gumby.toggle(this.targets[0]);
+                        }
 		}
 
 		// call event handler here, applying scope of object Switch/Toggle
@@ -177,27 +160,16 @@
 
 		// combine single target with switch and add active class
 		} else if(this.targets.length == 1) {
-			$target = this.targets[0];
-				
-			// add this element to it unless gumby-self set
-			if(!this.self) {
-				$target = $target.add(this.$el);
-			}
-
-			$target.addClass(this.className);
+                        Gumby.switch(this.targets[0]);
 
 		// if two targets check active state of first
 		// always combine switch and first target
 		} else if(this.targets.length > 1) {
-			$target = this.targets[0];
-				
-			// add this element to it unless gumby-self set
-			if(!this.self) {
-				$target = $target.add(this.$el);
-			}
-
-			$target.addClass(this.className);
-			this.targets[1].removeClass(this.className);
+			if(!this.targets[0].is(':visible')) {
+                            Gumby.switch(this.targets[0]);
+                        } else {
+                            Gumby.switch(this.targets[1]);
+                        }
 		}
 
 		// call event handler here, applying scope of object Switch/Toggle
@@ -205,6 +177,39 @@
 			cb.apply(this);
 		}
 	};
+        
+        Gumby.toggle = function(trigger) {
+            if(trigger.height() === 0) {
+                trigger.css({'height' : 'auto', 'max-height' : 'inherit'});
+                var autoHeight = trigger.height();
+                trigger.height(0).animate({height: autoHeight}, {
+                    duration: 250,
+                    easing: 'easeOutQuart',
+                    complete: function() {
+                        trigger.height('auto');
+                    }
+                });
+            } else {
+                trigger.animate({height: 0}, {
+                    duration: 250,
+                    easing: 'easeOutQuart'
+                });
+            }
+        }
+        
+        Gumby.switch = function(trigger) {
+            if(trigger.height() === 0) {
+                trigger.css({'height' : 'auto', 'max-height' : 'inherit'});
+                var autoHeight = trigger.height();
+                trigger.height(0).animate({height: autoHeight}, {
+                    duration: 250,
+                    easing: 'easeOutQuart',
+                    complete: function() {
+                        trigger.height('auto');
+                    }
+                });
+            }
+        }
 
 	// add toggle initialisation
 	Gumby.addInitalisation('toggles', function(all) {
